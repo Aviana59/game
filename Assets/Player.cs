@@ -4,18 +4,25 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class AutoMoveLeft : MonoBehaviour
 {
-    public float speed = 25.0f; // Kecepatan karakter
+    public float speed = 25.0f;
+    public Vector2 moveDirection = Vector2.left;
+    private Rigidbody2D rb;
+    public bool isMove = true;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
-        // Gerakkan karakter ke kiri
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        if (isMove)
+        {
+            rb.velocity = moveDirection.normalized * speed;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero; 
+        }
     }
-
-	void Start()
-	{
-    // Ganti posisi awal karakter
-    transform.position = new Vector3(1500, 149, 0); // Ganti koordinat sesuai kebutuhan
-	}
-
 }
