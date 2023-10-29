@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         menupanel.SetActive(true);
-        menupanel.SetActive(false);  
+        infopanel.SetActive(false);  
     }
 
     // Update is called once per frame
