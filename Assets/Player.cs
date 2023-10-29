@@ -25,4 +25,5 @@ public class AutoMoveLeft : MonoBehaviour
             rb.velocity = Vector2.zero; 
         }
     }
+
 }

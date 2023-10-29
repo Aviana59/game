@@ -2,21 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour {
-	public int lifetime = 2;
-	private float timer;
-	void OnCollisionEnter2D(Collision2D target){ //cek tabrakan tanpa is trigger
-		if (target.gameObject.tag=="Enemy"){ //jika tabrakan dgn enemy
-			Destroy(target.gameObject); //hancurkan enemy tsb
-		}
-		Destroy (gameObject); //destroy diri sendiri
-	}
+public class BulletScript : MonoBehaviour
+{
+    public float kecepatanTembak = 5.0f;
+    public string targetTag = "Target"; // Ganti dengan tag yang sesuai
 
-	void Update(){
-		timer += Time.deltaTime; //count waktu kemunculan
-		if(timer > lifetime){ //bila sudah mencapai lifetime			
-			timer = 0; //reset timer
-			Destroy(gameObject); //hancurkan diri sendiri
+    void Update()
+    {
+        MoveTowardsTarget();
+    }
+
+    void MoveTowardsTarget()
+    {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag(targetTag);
+
+        if (targets.Length > 0)
+        {
+            Transform targetTransform = targets[0].transform; // Misalnya, ambil target pertama
+
+            // Hitung arah dari peluru ke objek target
+            Vector2 direction = (targetTransform.position - transform.position).normalized;
+
+            // Atur kecepatan peluru dengan arah yang dihitung
+            GetComponent<Rigidbody2D>().velocity = direction * kecepatanTembak;
+        }
+    }
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.CompareTag(targetTag)){
+			Destroy(gameObject);
 		}
 	}
 }

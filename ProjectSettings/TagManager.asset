@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Tembok
   - berhenti
+  - Peluru
+  - System
   layers:
   - Default
   - TransparentFX

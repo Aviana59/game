@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1211982459391956448
+--- !u!1 &6574381154676721161
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8337538981008646729}
-  - component: {fileID: 8191116182727478213}
-  - component: {fileID: 4976682872034436149}
-  - component: {fileID: 5588243869089538206}
-  - component: {fileID: 6690333218752470964}
-  m_Layer: 3
-  m_Name: Peluru
-  m_TagString: Untagged
+  - component: {fileID: 3371186231378138349}
+  - component: {fileID: 2974175518378745682}
+  - component: {fileID: 8935691844558108582}
+  - component: {fileID: 5239102665616870918}
+  - component: {fileID: 4604084676690435468}
+  - component: {fileID: 341026836662469305}
+  m_Layer: 0
+  m_Name: Bullet
+  m_TagString: Peluru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8337538981008646729
+--- !u!224 &3371186231378138349
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211982459391956448}
+  m_GameObject: {fileID: 6574381154676721161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -36,24 +37,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 306, y: -154.23}
-  m_SizeDelta: {x: 265.3967, y: 184.0541}
+  m_AnchoredPosition: {x: 0.000011444, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8191116182727478213
+--- !u!222 &2974175518378745682
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211982459391956448}
+  m_GameObject: {fileID: 6574381154676721161}
   m_CullTransparentMesh: 1
---- !u!114 &4976682872034436149
+--- !u!114 &8935691844558108582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211982459391956448}
+  m_GameObject: {fileID: 6574381154676721161}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19e147d788fa696479f580b5d568565f, type: 3}
+  m_Sprite: {fileID: 1829708041, guid: 19e147d788fa696479f580b5d568565f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -77,14 +78,14 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!50 &5588243869089538206
+--- !u!50 &5239102665616870918
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211982459391956448}
+  m_GameObject: {fileID: 6574381154676721161}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -92,7 +93,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -104,13 +105,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6690333218752470964
+--- !u!114 &4604084676690435468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574381154676721161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290751763d1c3134987a2accdc09796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kecepatanTembak: 200
+  targetTag: System
+--- !u!58 &341026836662469305
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211982459391956448}
+  m_GameObject: {fileID: 6574381154676721161}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -133,9 +148,9 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.45200348, y: 1.130024}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 31.010334
