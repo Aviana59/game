@@ -12,13 +12,13 @@ public class Menu : MonoBehaviour
     void Start()
     {
         menupanel.SetActive(true);
-        menupanel.SetActive(false);  
+        infopanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void StartButton(string scenename)
@@ -35,7 +35,7 @@ public class Menu : MonoBehaviour
     public void BackButton()
     {
         menupanel.SetActive(true);
-        menupanel.SetActive(false);
+        infopanel.SetActive(false);
     }
 
     public void ExitButton()
